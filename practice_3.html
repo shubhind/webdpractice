@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #bhu{
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <button style="border-radius: 30%; background-color:turquoise; color:ghostwhite;" onclick="bring()">bring background</button>
+        <!--how to write function in javascript-->
+        <script>
+            function displaytime(){
+                document.getElementById("qwer").innerHTML=Date();
+            }
+            function changeletter(){
+                document.getElementById("qwer").innerHTML="badal gaya na";
+            }
+            function changecolor(){
+                document.getElementById("qwer").style.color="blue";
+            }
+            function reset(){
+                document.getElementById("qwer").innerHTML="pitega tu";
+                document.getElementById("qwer").style.color="black";
+                document.getElementById("qwer").style.backgroundColor="yellow";
+                document.getElementById("bhu").src="angryface.png";
+            }
+            function bring(){
+                document.body.style.backgroundImage='url(bulldog.png)';
+            }
+        </script>
+        <!--yahan par title aur id ka bhadiya use hai-->
+        <p id="qwer">pitega tu</p>
+        <button onclick="displaytime()" title="date aur time bataeyga">date and time</button>
+        <button onclick="changeletter()">changeletter</button>
+        <button onclick="changecolor()">changecolor</button>
+        <button onclick="reset()" title="photo bhi badal jaegi">reset</button>
+        <img src="somandar.png" id="bhu" height=150 width=200>
+    </body>
+</html>

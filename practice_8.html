@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>animation</title>
+        <meta name="author" content="shubham indoliya">
+        <meta charset="utf-8">
+        <meta name="viewports" content="width=device-width,initial-scale=1">
+        <style>
+            
+            body{
+                background-image: url(ccd.png);
+                background-size: cover;
+            }
+            #div1{
+                position: relative;
+                animation-name: first;
+                animation-delay: 1s;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+            }
+            @keyframes first{
+                0%  {background-color: red;top: 0px; left: 0px;}
+                25% {background-color: yellow; top: 0px; left: 200px;}
+                30% {background-color: turquoise;top: 200px; left: 200px;}
+                95% {background-color: hotpink;top: 200px; left: 0px;}
+                100% {background-color: red;top: 0px; left: 0px;}
+            }
+            #div2{
+                position: relative;
+                animation-name: first;
+                animation-duration: 8s;
+                animation-iteration-count: 3;
+                animation-direction: alternate-reverse;
+                animation-fill-mode: backwards;
+            }
+        </style>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <body>
+            <div style="width: 100px; height: 100px; background-color: red;" id="div1">
+                <p>ye kahin bhi jaa sakta hai</p>
+            </div>
+            <div style="width: 100px; height: 100px; background-color: red; margin-left: 800px;" id="div2"></div>
+            <div style="width: 100px; height: 100px; background-color: red;margin-left: 400px;" id="div2"></div>
+            <label for="tareek">Date:</label>
+            <input type="text" name="tareek" id="date" style="margin-top: 200px;">
+        <script>
+            $("#date").datepicker();
+        </script>
+        </body>
+    </head>
+</html>

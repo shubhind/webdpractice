@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google</title>
+        <meta charset="utf-8">
+        <meta name="refresh" content="10">
+        <meta name="author" content="shubham indoliya">
+        <meta name="keywords" content="html,google,meta tags">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>
+            li{
+                display: inline-block;
+                width: 200px;
+            }
+            section{
+                display: flex;
+                flex-direction: row;
+            }
+            .ima{
+                box-shadow:blueviolet 10px 10px 10px;
+                border:solid brown;
+            }
+            .box img{
+                transition:1s;
+            }
+            .box:hover img{
+                transform: scale(1.5) rotate(-15deg);
+            }
+            footer img{
+                transition: 1s;
+            }
+            footer:hover img{
+                transform: scale(1.5) rotate(15deg);
+            }
+        </style>   
+    </head>
+    <body>
+        <header>
+            <ul style="list-style-type:none ; margin: 0%; padding: 0%;">
+                <li>HOME</li>
+                <li>CONTACT</li>
+                <li></li>
+                <li>DIRECTION</li>
+                <li>LOGO</li>
+            </ul>
+        </header>
+        <section>
+            <figure class="box">
+                <img src="bharatpur.png" width="200" height="150" style="border-radius: 50%;" class="ima">
+                <center><figcaption><strong>bharatpur</strong></figcaption></center>
+            </figure>
+            <figure style="margin-left:100px" class="box">
+                <img src="blackpanther.png" width="200" height="150" style="border-radius: 50%;"class="ima">
+                <center><figcaption><strong>wakanda</strong></figcaption></center>
+            </figure>
+            <figure style="margin-left:100px" class="box">
+                <img src="bulldog.png" width="200" height="150" style="border-radius: 50%;"class="ima">
+                <center><figcaption><strong>bull dog</strong></figcaption></center>./
+            </figure>./
+            <figure style="margin-left: 100px;" class="box">
+                <a href="https://www.shaadi.com/"><img src="angryface.png" width="200" height="150" class="ima" style="border-radius: 70%;"></a>
+                <center><figcaption><strong>angry face</strong></figcaption></center>
+            </figure>
+        </section>
+        <footer id="kun">
+            <center><img src="pubglogo.png" width="150" height="200" style="border-radius: 30%;"></center>
+        </footer>
+    </body>
+</html>

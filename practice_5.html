@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <title>learn code academy</title>
+    <meta name="refresh" content="10">
+    <meta name="author" content="shubham indoliya">
+    <style>
+        body{
+            background-color: aqua;
+        }
+        header{
+            padding: 0px;
+            margin: 10px;
+        }
+        section{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+        }
+        li{
+            display: inline-block;
+            margin-right:20px;
+        }
+        div{
+            width: 100px;
+            background-color: brown;
+            margin:auto;
+        }
+        footer{
+            margin-top: 30px;
+        }
+        a:any-link{
+            color:black;
+            text-decoration: none;
+        }
+        .shub{
+            display: flex;
+            flex-direction: row;
+        }
+        footer{
+            background-color: blue;
+            width: 300px;
+            height: 50px;
+            color: red;
+            margin-left: 500px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        <link href="https://code.jquery.com/jquery-3.5.0.min.js">
+        <link href="https://code.jquery.com/jquery-3.5.0.js">
+    </script>
+    <body>
+        <header>
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li><a href="practice_1.html">HEAD</a></li>
+                <li><a href="practice_2.html">LOCATION</a></li>
+                <li><a href="practice_3.html">CONTACT</a></li>
+            </ul>
+        </header>
+        
+        <section>
+            <div>FIRST</div>
+            <div>SECOND</div>
+            <div>THIRD</div>
+        </section>
+        <div style="background-color: aqua;">
+        <img src="blackpanther.png" width="300px" width="300px">
+        <button id="fade" style="border-radius: 10px;" class="shub">fadeout</button>
+        <button id="slid" style="border-radius: 10px;" class="shub">slide</button>
+        </div>
+        <section>lower section</section>
+        <footer>
+            <p><strong>mujhe kahin bhi le jaaa <br> sakte ho</strong></p>
+        </footer><br>
+        <script>
+            $(document).ready(function(){
+                $("#fade").click(function(){
+                    $("img").fadeOut("slow");
+                    $("#fade").fadeOut("slow");
+                });
+            });
+            $(document).ready(function(){
+                $("input").click(function() {
+                    $("li").hide();
+                });
+            });
+            $(document).ready(function(){
+                $("button").click(function(){
+                    alert("value: "+$("#kun").val());
+                });
+            });
+            $("#slid").on("click",function(){
+                    $("img").slideUp("slow");
+            });
+            $(document).ready(function(){
+                $("div").on("click",function(){
+                    $(this).hide();
+                });
+            });
+        </script>
+        <label for="jquery" style="text-transform: uppercase;">enter anything</label>
+        <input type="text" value="" id="kun" name="jquery" placeholder="kunnu"><br>
+        <button style="background-color: blue; border-radius: 5px; border:none;">Submit</button>
+    </body>
+</html>

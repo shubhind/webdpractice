@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="20">
+        <meta name="author" content="shubham">
+        <meta name="viewport" content="width=device-widht,initial-sacle=1">
+        <title>Google</title>
+        <style>
+            body{
+                background-image: url(blackpanther.png);
+                background-repeat: no-repeat;
+                background-size: 1370px 625px;
+            }
+            section{
+                display: flex;
+                flex-direction: row;
+            }
+            .logo{
+                position:relative;
+                top: -40px;
+            }
+            section.shub figure img{
+                border: solid gray;
+                box-shadow:black 10px 10px 30px;
+            }
+            div.kun,li{
+                margin:0%;
+                padding:0%;
+                display: inline-block;
+                width: 200px;
+            }
+            a:any-link{
+                text-decoration: none;
+                color:gold;
+            }
+            .shub img{
+                transition: 1s;
+            }
+            .shub:hover img{
+                transform: scale(1.5) rotate(15deg);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+        <ul style="list-style: none; padding: 0;">
+            <li class="logo"><a href="index.html">HOME</a></li>
+            <li class="logo"><a href="index2.html">CONTACT</a></li>
+            <li><a href="practice_6.html" style=" text-decoration: none;"><img src="artisian.png" height="80" width="200" style="border-radius:50%; margin-left:-20px"></a></li>
+            <li class="logo" style="margin-left: 50px;"><a href="index3.html">LOCATIONS</a></li>
+            <li class="logo"><a href="index4.html">DIRECTION</a></li>
+        </ul>
+        </header>
+        <section class="shub">
+            <figure style="margin-right: 250px;">
+                <!--figure tag contains img and figcaption tag-->
+                <img src="cherries.png" alt="cherries" height="150" width="200" style="border-radius: 50%;">
+                <center><figcaption>CHERRIES</figcaption></center>
+            </figure>
+            <figure style="margin-right: 250px;">
+                <img src="flower.png" alt="flower" width="200" height="150" style="border-radius: 50%;">
+                <center><figcaption>FLOWER</figcaption></center>
+            </figure>
+            <figure>
+                <img src="angryface.png" alt="angry face" width="200" height="150" style="border-radius: 50%;">
+                <center><figcaption>ANGRY FACE</figcaption></center>
+            </figure>  
+        </section>
+        <footer>
+            <div class="kun">SECTION D</div>
+            <div class="kun">SECTION E</div>
+        </footer>
+    </body>
+</html>

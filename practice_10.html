@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="refresh" content="10">
+        <style>
+            body{
+                background-image: url(tajmahal.png);
+                background-size: cover;
+            }
+            img:hover{
+                box-shadow: black 10px 10px 10px;
+            }
+            img{
+                transition: 1s;
+            }
+        </style>
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        <link href="https://code.jquery.com/jquery-3.5.0.min.js">
+        <link href="https://code.jquery.com/jquery-3.5.0.js">
+    </script>
+    <body>
+        <p id="sum"><button onclick="sum()">i want something</button></p>
+        <input type="number" value="" required id="kun">
+        <p id="shub"><button id="dfg">multipy by 10</button></p>
+        <select id="cars" style="background-color: bisque;border-radius: 5px; margin-left: 40px;" onchange="myfunction()">
+            <option value="0" selected disabled>car</option>
+            <option value="audi">audi</option>
+            <option value="toyota">toyota</option>
+            <option value="mercedes">mercedes</option>
+            <option value="tata">tata</option>
+            <option value="nissan">nissan</option>
+        </select>
+        <p id="present">when you will select any car this text will change</p>
+        <img src="angryface.png" width="150" height="150" style="border-radius: 20%;margin-left: 50px;" onmouseover="large()">
+        <script>
+        var x=4,y=6;
+        var z=x+y;
+        function sum(){
+            document.getElementById("sum").innerHTML="the answer is "+z+".";
+        }
+        $(document).ready(function(){
+            $("#dfg").click(function(){
+                alert(10*$("#kun").val());
+            });
+        });
+        function myfunction(){
+            var x=$("#cars").val();
+            document.getElementById("present").innerHTML="you selected: "+x;
+        }
+        </script>   
+    </body>
+</html>
