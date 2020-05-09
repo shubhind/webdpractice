@@ -23,6 +23,51 @@
                     color:black;
                     border:turquoise;
                 }
+                img{
+                    width: 100%;
+                    height: 680px;
+                }
+                .dot{
+                    cursor: pointer;
+                    background-color: #bbb;
+                    height: 15px;
+                    width: 30px;
+                    border-radius: 5px;
+                }
+                .slide{
+                    position: relative;
+                }
+                .text{
+                    position: absolute;
+                    top: 660px;
+                    left: 630px;
+                    font-weight: bold;
+                }
+                .number{
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    font-weight: bold;
+                }
+                .next,.prev{
+                    position: absolute;
+                    cursor: pointer;
+                    top: 320px;
+                    background-color: rgba(0,0,0,.2);
+                    margin-left: 30px;
+                    width: 40px;
+                    height: 60px;
+                    border-radius: 0 5px 5px 0;
+                    transition: .5s;
+                }
+                .prev:hover,.next:hover{
+                    background-color: rgba(0,0,0,.8);
+                }
+                .next{
+                    top: 320px;
+                    right: 15px;
+                    border-radius: 5px 0 0 5px;
+                }
             </style>
     </head>
     <body>
@@ -41,5 +86,64 @@
             <li>looks stupid</li>
             <li>DoPA,<button><a href="https://hdreporn.com">click</a></button>button to know more;)</li>
         </ul>     
+        <section style="position: relative;">
+            <div>
+            <div class="slide">
+                <div class="number">1 / 5</div>
+                <img src="blackpanther.png">
+                <div class="text">Wakanda</div>
+            </div>
+            <div class="slide">
+                <div class="number">2 / 5</div>
+                <img src="ccd.png">
+                <div class="text">Coffee</div>
+            </div>
+            <div class="slide">
+                <div class="number">3 / 5</div>
+                <img src="grapes.png">
+                <div class="text">Grapes</div>
+            </div>
+            <div class="slide">
+                <div class="number">4 / 5</div>
+                <img src="mountain.png">
+                <div class="text">Mountains</div>
+            </div>
+            <div class="slide">
+                <div class="number">5 / 5</div>
+                <img src="berries.png">
+                <div class="text">Berries</div>
+            </div>
+            <a class="prev" onclick="chngslide(-1)" style="text-align: center;">&#10094;</a>
+            <a class="next" onclick="chngslide(1)" style="text-align: center;">&#10095;</a>
+        </div>
+        <div style="margin-left: 580px; position: relative; top: -70px;">
+            <span class="dot" onclick="putslide(1)"></span>
+            <span class="dot" onclick="putslide(2)"></span>
+            <span class="dot" onclick="putslide(3)"></span>
+            <span class="dot" onclick="putslide(4)"></span>
+            <span class="dot" onclick="putslide(5)"></span>
+        </div>
+        </section>
+        <script>
+            index=1;
+            showslide(index);
+            function chngslide(n){
+                showslide(index+=n);
+            }
+            function putslide(n){
+                showslide(index=n);
+            }
+            function showslide(n){
+                var i,slide,dot;
+                if(n<1) index=5;
+                if(n>5) index=1;
+                slide=document.getElementsByClassName("slide");
+                dot=document.getElementsByClassName("dot");
+                for(i=0;i<5;i++) slide[i].style.display="none";
+                for(i=0;i<5;i++) dot[i].className=dot[i].className.replace(" active","");
+                slide[index-1].style.display="block"
+                dot[index-1].className+=" active";
+            }
+        </script>
     </body>
 </html> 
